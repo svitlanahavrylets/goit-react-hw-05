@@ -10,10 +10,31 @@ const options = {
   },
 };
 const fetchData = async () => {
-  try {
-    axios.get(url, options).then((response) => console.log(response.data));
-  } catch (err) {
-    console.error(err);
-  }
+  const { data } = await axios.get(url, options);
+  return data;
 };
 export default fetchData;
+
+export const fetchDetailData = async (movie_id) => {
+  const { data } = await axios.get(
+    `https://api.themoviedb.org/3/movie/${movie_id}`,
+    options
+  );
+  return data;
+};
+
+export const fetchCastData = async (movie_id) => {
+  const { data } = await axios.get(
+    `https://api.themoviedb.org/3/movie/${movie_id}/credits`,
+    options
+  );
+  return data;
+};
+
+export const fetchReviewsData = async (movie_id) => {
+  const { data } = await axios.get(
+    `https://api.themoviedb.org/3/movie/${movie_id}/reviews`,
+    options
+  );
+  return data;
+};
