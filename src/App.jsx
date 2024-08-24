@@ -6,6 +6,7 @@ import MovieDetailsPage from "./pages/MovieDetailsPage/MovieDetailsPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import MovieCast from "./components/MovieCast/MovieCast";
 import MovieReviews from "./components/MovieReviews/MovieReviews";
+import "./App.css"; 
 
 function App() {
   return (

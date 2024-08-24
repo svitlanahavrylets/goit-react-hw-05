@@ -1,0 +1,40 @@
+.main {
+  padding: 20px;
+  background-color: #031019;
+  height: 115vw;
+}
+.divSearchForm {
+  display: block;
+  position: relative;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  width: 272px;
+}
+.input {
+  padding: 8px 16px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 16px;
+  line-height: 150%;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+}
+.searchBtn {
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+.searchBtn:hover,
+.searchBtn:active {
+  outline: none;
+}

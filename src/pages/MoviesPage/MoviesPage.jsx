@@ -38,7 +38,7 @@ const MoviesPage = () => {
     searchMovies();
   }, [userQuery]);
 
-  const handleSubmit = (event, searchTerm) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     const searchInputValue = event.target.userQuery.value.trim();
 
@@ -47,17 +47,15 @@ const MoviesPage = () => {
       return {};
     } else {
       setSearchParams({
-        query: searchTerm,
+        query: searchInputValue,
       });
     }
-
-    // setSearchTerm("");
   };
 
   return (
     <>
       {error && <ErrorMessage />}
-      <header className={css.header}>
+      <main className={css.main}>
         <form className={css.searchForm} onSubmit={handleSubmit}>
           <div className={css.divSearchForm}>
             <input className={css.input} type="text" name="userQuery" />
@@ -67,9 +65,9 @@ const MoviesPage = () => {
           </div>
         </form>
         {loading && <Loader />}
-      </header>
-      <MovieList movies={movies} />
-      <Toaster position="top-right" />
+        <MovieList movies={movies} />
+        <Toaster position="top-right" />
+      </main>
     </>
   );
 };

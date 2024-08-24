@@ -1,14 +1,11 @@
 .headerContainer {
-  min-width: 100vw;
-  /* padding-left: 15px;
-  padding-right: 15px; */
-  margin: 0 auto;
+  background-color: #2a465c;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.pageHeader {
-  border-bottom: 1px solid #e7e9fc;
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
+
 .pageNav {
   display: flex;
   align-items: center;
@@ -16,17 +13,23 @@
   padding-left: 16px;
 }
 .menuLink {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-  padding: 24px 0;
-  display: block;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #fff;
+  color: #2a465c;
+  border: 1px solid #2a465c;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 20px;
+}
+.menuLink:hover,
+.menuLink:focus,
+.menuLink:active {
+  background-color: #316d92;
+  color: #fff;
 }
 .active {
-  color: #bd0909;
+  background-color: #316d92;
+  color: #fff;
+  border-color: #316d92;
 }
