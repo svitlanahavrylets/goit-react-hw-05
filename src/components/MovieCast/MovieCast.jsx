@@ -5,6 +5,8 @@ import Loader from "../Loader/Loader";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import css from "./MovieCast.module.css";
 
+const defaultImg = "https://dummyimage.com/w200/cdcdcd/000.jpg&text=No+poster";
+
 const MovieCast = () => {
   const [cast, setCast] = useState([]);
   const { movieId } = useParams();
@@ -39,7 +41,12 @@ const MovieCast = () => {
               <li className={css.item} key={castItem.id}>
                 <div>
                   <img
-                    src={`https://image.tmdb.org/t/p/w200${castItem.profile_path}`}
+                    className={css.img}
+                    src={
+                      castItem.profile_path
+                        ? `https://image.tmdb.org/t/p/w200${castItem.profile_path}`
+                        : defaultImg
+                    }
                     alt={castItem.name}
                   />
                 </div>

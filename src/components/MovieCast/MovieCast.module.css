@@ -15,3 +15,8 @@
   gap: 8px;
   width: calc((100% -16px * 3) / 4);
 }
+
+.img {
+  width: 200px;
+  height: 300px;
+}

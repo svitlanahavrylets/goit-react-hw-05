@@ -14,6 +14,9 @@ const MovieDetailsPage = () => {
 
   const btnGoBackRef = useRef(location.state?.from ?? "/");
 
+  const defaultImg =
+    "https://dummyimage.com/w200/cdcdcd/000.jpg&text=No+poster";
+
   useEffect(() => {
     const moviesDetailsData = async () => {
       try {
@@ -47,7 +50,11 @@ const MovieDetailsPage = () => {
         <div>
           <img
             className={css.imgDetailPage}
-            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+            src={
+              movie.poster_path
+                ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+                : defaultImg
+            }
             alt={movie.title}
           />
         </div>

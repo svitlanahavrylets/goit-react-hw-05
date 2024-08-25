@@ -17,9 +17,8 @@ const MoviesPage = () => {
 
   useEffect(() => {
     const searchMovies = async () => {
-      if (userQuery === "") {
-        return;
-      }
+      if (!userQuery) return;
+
       try {
         setLoading(true);
         const data = await fetchSearchMovies(userQuery);
